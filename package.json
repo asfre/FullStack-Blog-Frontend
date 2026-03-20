@@ -1,0 +1,45 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "vue-tsc && node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "node ./node_modules/prettier/bin/prettier.cjs --write src/",
+    "test": "node ./node_modules/vitest/vitest.mjs",
+    "test:ui": "node ./node_modules/vitest/vitest.mjs --ui",
+    "coverage": "node ./node_modules/vitest/vitest.mjs run --coverage"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
+    "axios": "^1.6.2",
+    "markdown-it": "^13.0.2",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "tailwindcss": "^3.3.6",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16",
+    "element-plus": "^2.4.4",
+    "@element-plus/icons-vue": "^2.3.1",
+    "md-editor-v3": "^4.19.1"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.6.1",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/test-utils": "^2.4.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "jsdom": "^23.0.1",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0",
+    "vue-tsc": "^1.8.27"
+  }
+}
