@@ -1,8 +1,18 @@
 import axios from 'axios'
 
+// 根据环境设置 baseURL
+const getBaseURL = () => {
+  // 生产环境使用实际后端地址
+  if (import.meta.env.PROD) {
+    return 'https://backend-no0rg5v6s-asfres-projects.vercel.app/api'
+  }
+  // 开发环境使用代理
+  return '/api'
+}
+
 // 创建Axios实例
 const request = axios.create({
-  baseURL: '/api',
+  baseURL: getBaseURL(),
   timeout: 60000, // 增加到30秒，适应AI API调用时间
   headers: {
     'Content-Type': 'application/json'
